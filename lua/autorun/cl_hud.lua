@@ -2,7 +2,7 @@ Noah_HUD = Noah_HUD or {}
 Noah_HUD.Config = Noah_HUD.Config or {}
 ----------------------- Configuration -----------------------
 Noah_HUD.Config.Text = true   -- Affiche le texte
-Noah_HUD.Config.MilimalisteMode = true -- Mode minimaliste (Affiche le job, le salaire et l'argent)
+Noah_HUD.Config.MilimalisteMode = false -- Mode minimaliste (Affiche le job, le salaire et l'argent)
 
 ----------------------- Fin Configuration -----------------------
 
@@ -57,8 +57,6 @@ hook.Add("HUDPaint", "Noah:HUD:FiveM", function()
     end
 
     // Munition
-
-    if weaponsblackliste[LocalPlayer():GetActiveWeapon():GetClass()] then return end
 
     if !LocalPlayer():Alive() then return end
     if not IsValid(LocalPlayer():GetActiveWeapon()) then return end
@@ -152,7 +150,7 @@ end)
    Name: noah-hudfivem
    Author : Noah
    Desc: Hud FiveM
-   Version : 1.01
-   Last update : 22/09/2024
+   Version : 1.02
+   Last update : 06/10/2024
    Discord : noah_ballas
 -----------------------------------------------------------]]
